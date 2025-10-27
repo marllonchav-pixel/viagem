@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEU NOME TURISMO - Reservas</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f0f4f8;
+    color: #333;
+  }
+
+  nav {
+    background-color: #2e5a88;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  nav a:hover {
+    color: #cce0ff;
+  }
+
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #4a7ca8;
+    color: white;
+  }
+  header h1 { margin: 0; font-size: 2.5em; }
+  header p { font-style: italic; font-size: 1.2em; }
+
+  .destino-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .card-destino {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card-destino:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  .card-destino img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-destino h3 {
+    margin: 15px 10px 5px 10px;
+    color: #2e5a88;
+  }
+  .card-destino p {
+    margin: 5px 10px 15px 10px;
+    font-size: 0.95em;
+  }
+
+  .reserva-form {
+    background: white;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .reserva-form h2 {
+    text-align: center;
+    color: #2e5a88;
+  }
+  .reserva-form input, .reserva-form select, .reserva-form button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+  .reserva-form button {
+    background-color: #2e5a88;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .reserva-form button:hover {
+    background-color: #1f3d5a;
+  }
+
+  footer {
+    background-color: #2e5a88;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#destinos">Destinos</a>
+  <a href="#reserva">Reservar</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<header>
+  <h1>SEU NOME TURISMO</h1>
+  <p>Transformando suas viagens em experiências inesquecíveis</p>
+</header>
+
+<section id="destinos" class="destino-grid">
+  <div class="card-destino">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Praia Tropical">
+    <h3>Praia Tropical</h3>
+    <p>Preço estimado de Manaus: R$ 2.500,00</p>
+    <p>Relaxe nas areias brancas e águas cristalinas da praia tropical dos seus sonhos.</p>
+  </div>
+  <div class="card-destino">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnXO1WCdpE_JlRuSK5Aw9R0enOnaMdVcGk8ZbfZR85ig&s=10" alt="Montanhas Nevadas">
+    <h3>Montanhas Nevadas</h3>
+    <p>Preço estimado de Manaus: R$ 4.200,00</p>
+    <p>Desfrute de aventuras e esportes na neve em paisagens deslumbrantes.</p>
+  </div>
+  <div class="card-destino">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtG3mk3zWSbDzJxKMbinMIP_Ccq12RZjNQdjt5IL0KlA&s=10" alt="Cidade Histórica">
+    <h3>Cidade Histórica</h3>
+    <p>Preço estimado de Manaus: R$ 3.100,00</p>
+    <p>Explore a cultura, história e gastronomia de cidades antigas e charmosas.</p>
+  </div>
+</section>
+
+<section id="reserva" class="reserva-form">
+  <h2>Reserve sua Viagem</h2>
+  <form id="form-reserva">
+    <input type="text" placeholder="Nome Completo" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Telefone" required>
+    <select required>
+      <option value="">Escolha o destino</option>
+      <option value="Praia Tropical">Praia Tropical</option>
+      <option value="Montanhas Nevadas">Montanhas Nevadas</option>
+      <option value="Cidade Histórica">Cidade Histórica</option>
+    </select>
+    <input type="date" required>
+    <button type="submit">Confirmar Reserva</button>
+  </form>
+</section>
+
+<footer id="contato">
+  <p>📧 contato@eulerviagensaereas.com.br<p>
+  </p> 📞 (11) 91603-6384</p>
+  <p>Rua São Carlos, n°322, Nova Esperança - Manaus</p>
+  <p>© 2025 EULEE VIAGENS</p>
+</footer>
+
+<script>
+  document.getElementById('form-reserva').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Reserva enviada com sucesso! Entraremos em contato.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
